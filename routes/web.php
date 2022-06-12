@@ -25,18 +25,4 @@ Route::get('/resutado', function () {
 });
 
 
-
-Route::post('/cadastrar-voto', function (Request $request) {    
-    
-    Candidato::create([
-        'num' => $request->votar
-    ]);
-    $total22 = Candidato::where('num','22')->count();
-    $total33 = Candidato::where('num','33')->count();
-    $total44 = Candidato::where('num','44')->count();
-    
-
-    return view('resutado', compact('total22','total33','total44'));
-    //return view('resutado');
-
-});
+Route::post('/cadastrar-voto','App\Http\Controllers\Eventos@cadastrarvoto');

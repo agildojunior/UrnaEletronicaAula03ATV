@@ -36,7 +36,7 @@
 
                     <form action="/cadastrar-voto" method="POST">
                         @csrf
-                        <input type="text" id="voto" name="votar">
+                        <input type="text" id="voto" name="votar" required="true">
                         <button> Votar </button>
                     </form>
 
